@@ -12,7 +12,16 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'hbs');
+
+var mongoose = require('mongoose');
+
+//setup mongo later
+// mongoose.connect(process.env.MONGODB);
+// mongoose.connection.on('error', function() {
+//   console.log('monogdbURI', process.env.MONGODB)
+//   console.error('MongoDB Connection Error. Check your URI and make sure MongoDB is running.');
+// });
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
